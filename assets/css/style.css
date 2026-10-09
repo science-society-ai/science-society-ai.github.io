@@ -276,16 +276,6 @@ main.container {
   margin-bottom: 12px;
 }
 
-/* Content the organizers still have to supply */
-
-.todo {
-  padding: 1px 8px;
-  border: 1px dashed currentColor;
-  border-radius: 4px;
-  color: var(--muted);
-  font-style: italic;
-}
-
 /* Footer */
 
 .footer {
