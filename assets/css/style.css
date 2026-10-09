@@ -1,0 +1,395 @@
+/* Science and Society of Modern AI · ICLR 2027 workshop site.
+   Layout follows tokenization-workshop.github.io/tokshop-2025 (al-folio theme). */
+
+:root {
+  --theme: #2698ba;
+  --text: #000;
+  --muted: #6c757d;
+  --line: rgba(0, 0, 0, 0.1);
+  --banner-bg: #eef2f5;
+  --footer-bg: #1c1c1d;
+  --nav-h: 56px;
+  --footer-h: 35px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-padding-top: calc(var(--nav-h) + 12px);
+}
+
+body {
+  margin: 0;
+  padding-top: var(--nav-h);
+  padding-bottom: calc(var(--footer-h) + 32px);
+  background: #fff;
+  color: var(--text);
+  font-family: "Roboto", "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0 0 8px;
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+h1 {
+  margin-bottom: 40px;
+  font-size: 40px;
+}
+
+h2 {
+  font-size: 32px;
+}
+
+h3 {
+  font-size: 28px;
+}
+
+h4 {
+  margin-top: 20px;
+  font-size: 21px;
+}
+
+p,
+ul,
+ol {
+  margin: 0 0 16px;
+}
+
+ul,
+ol {
+  padding-left: 40px;
+}
+
+li + li {
+  margin-top: 4px;
+}
+
+li > ul {
+  margin: 4px 0 0;
+}
+
+a {
+  color: var(--theme);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+strong {
+  font-weight: 500;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+:focus-visible {
+  outline: 2px solid var(--theme);
+  outline-offset: 2px;
+}
+
+.container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.skip-link {
+  position: absolute;
+  top: -60px;
+  left: 12px;
+  z-index: 100;
+  padding: 8px 14px;
+  background: #fff;
+  color: #000;
+}
+
+.skip-link:focus {
+  top: 12px;
+}
+
+/* Navigation bar */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 50;
+  height: var(--nav-h);
+  border-bottom: 1px solid var(--line);
+  background: #fff;
+}
+
+.navbar .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  height: 100%;
+}
+
+.navbar-brand {
+  min-width: 0;
+  overflow: hidden;
+  color: #000;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.navbar-brand:hover {
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links a {
+  padding: 8px;
+  color: #000;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--theme);
+  text-decoration: none;
+}
+
+.nav-toggle {
+  display: none;
+  flex: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 44px;
+  height: 36px;
+  padding: 0 10px;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: #fff;
+  cursor: pointer;
+}
+
+.nav-toggle span {
+  display: block;
+  height: 2px;
+  background: rgba(0, 0, 0, 0.55);
+}
+
+/* Banner on the home page */
+
+.banner {
+  padding: 48px 15px 32px;
+  background: var(--banner-bg);
+  text-align: center;
+}
+
+.banner h2 {
+  margin: 0;
+  font-size: 32px;
+}
+
+.banner-subtitle {
+  margin: 4px 0 24px;
+  font-size: 20px;
+}
+
+.banner-links {
+  margin: 0;
+}
+
+main.container {
+  padding-top: 48px;
+}
+
+/* Organizers */
+
+.team-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px 45px;
+  margin-bottom: 32px;
+  padding-left: 20px;
+}
+
+.team-member {
+  width: 150px;
+  text-align: center;
+}
+
+.team-member img,
+.team-member .initials {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto 8px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: 50% 25%;
+}
+
+.team-member .initials {
+  display: grid;
+  place-items: center;
+  background: #e9ecef;
+  color: var(--muted);
+  font-size: 40px;
+}
+
+.team-member > a,
+.team-member > .name {
+  display: block;
+}
+
+.team-member p {
+  margin: 0;
+}
+
+/* Schedule */
+
+.schedule {
+  margin-bottom: 32px;
+}
+
+.schedule p {
+  margin-bottom: 12px;
+}
+
+/* Content the organizers still have to supply */
+
+.todo {
+  padding: 1px 8px;
+  border: 1px dashed currentColor;
+  border-radius: 4px;
+  color: var(--muted);
+  font-style: italic;
+}
+
+/* Footer */
+
+.footer {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 40;
+  height: var(--footer-h);
+  background: var(--footer-bg);
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 12px;
+  line-height: var(--footer-h);
+}
+
+.footer .container {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Small screens */
+
+@media (max-width: 640px) {
+  .brand-venue {
+    display: none;
+  }
+
+  .nav-toggle {
+    display: inline-flex;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: var(--nav-h);
+    right: 0;
+    left: 0;
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--line);
+    background: #fff;
+  }
+
+  .nav-links.is-open {
+    display: flex;
+  }
+
+  .nav-links a {
+    padding: 10px 15px;
+  }
+
+  .banner {
+    padding: 36px 15px 28px;
+  }
+
+  .banner h2 {
+    font-size: 27px;
+  }
+
+  .banner-subtitle {
+    font-size: 17px;
+  }
+
+  main.container {
+    padding-top: 36px;
+  }
+
+  h1 {
+    margin-bottom: 28px;
+    font-size: 34px;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+
+  h3 {
+    font-size: 24px;
+  }
+
+  h4 {
+    font-size: 19px;
+  }
+
+  ul,
+  ol {
+    padding-left: 24px;
+  }
+
+  .team-container {
+    justify-content: center;
+    gap: 24px 20px;
+    padding-left: 0;
+  }
+
+  .team-member {
+    width: 140px;
+  }
+
+  .team-member img,
+  .team-member .initials {
+    width: 120px;
+    height: 120px;
+  }
+}

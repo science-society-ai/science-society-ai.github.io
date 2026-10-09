@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Science and Society of Modern AI @ ICLR 2027</title>
+<meta name="description" content="Science and Society of Modern Artificial Intelligence is a workshop at ICLR 2027 in San Francisco. It studies the scientific claims about AI that society relies on, in three areas: scaling, measurement, and how training produces societal effects.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Science and Society of Modern AI @ ICLR 2027">
+<meta property="og:description" content="A workshop at ICLR 2027 in San Francisco on testing the claims about AI that society already relies on.">
+<meta property="og:url" content="https://science-society-ai.github.io/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232698ba'/%3E%3Ctext x='32' y='45' font-family='Helvetica,Arial,sans-serif' font-size='36' text-anchor='middle' fill='%23fff'%3ES%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="navbar">
+  <div class="container">
+    <a class="navbar-brand" href="./">Science and Society of Modern AI<span class="brand-venue"> @ ICLR 2027</span></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Menu"><span></span><span></span><span></span></button>
+    <nav class="nav-links" id="nav-links" aria-label="Pages">
+      <a class="active" href="./" aria-current="page">Home</a>
+      <a href="speakers/">Speakers</a>
+      <a href="schedule/">Schedule</a>
+    </nav>
+  </div>
+</header>
+
+<div class="banner">
+  <h2>Science and Society of Modern AI</h2>
+  <p class="banner-subtitle">Testing the claims about AI that society already relies on</p>
+  <p class="banner-links">
+    @ ICLR 2027<br>
+    San Francisco<br><br>
+    Quick links:<br>
+    <a href="#call-for-papers">Call for papers</a> | <a href="#important-dates">Important dates</a> | <a href="#contact">Contact the organizers</a>
+  </p>
+</div>
+
+<main class="container" id="main">
+
+<h1 id="call-for-papers">Call for papers</h1>
+
+<h3 id="important-dates">Important dates</h3>
+<ul>
+  <li>Call for papers opens: December 7, 2026
+    <ul>
+      <li>Submission portal: OpenReview (we will post the link when the call opens)</li>
+    </ul>
+  </li>
+  <li>Submission deadline: <strong>January 30, 2027</strong> (anywhere on earth)</li>
+  <li>Reviews due: February 15, 2027</li>
+  <li>Author notification: February 22, 2027</li>
+  <li>Accepted papers public on OpenReview: February 25, 2027</li>
+  <li>Talk titles and schedule posted: March 26, 2027</li>
+  <li>Workshop: ICLR 2027, San Francisco</li>
+</ul>
+
+<h3 id="about">About the workshop</h3>
+<p>Society now makes decisions about modern AI on the strength of scientific claims about it. Regulators attach obligations to training compute, labs hold back releases that fail dangerous-capability evaluations, economists use task-level benchmarks to estimate which jobs are exposed, and platforms plan to label generated text with watermarks. Each of these decisions rests on a claim that machine learning research can test: that compute predicts capability, that a benchmark score measures the ability it is named after, and that a detector still works against an adversary. Researchers have already tested several of these claims, and the results changed what the claims can support. Strong watermarking turns out to be impossible under two mild assumptions, and training compute tracks risk only loosely. In one randomized trial, experienced open-source developers took 19% longer with AI tools, even though they expected the tools to make them 24% faster.</p>
+<p>The <em>Science and Society of Modern AI</em> workshop at ICLR 2027 treats these claims as research questions. Society wants to know how capable the next model will be, which jobs it will change, whether its output can be told apart from ours, and whether many deployments built on one base model will fail together. These are questions about learning, scaling and measurement, and the ICLR community builds the tools that answer them.</p>
+<p>The workshop brings together two groups. One studies scaling, training dynamics and learning theory. The other measures the effects of deployed models with quantitative tools from economics, algorithmic fairness, networks and security. Each group has half of the answer: scaling studies make predictions without knowing which prediction a policy needs, and field studies measure effects without the mechanism that would carry them over to the next model.</p>
+
+<h3 id="topics">Problems we want solved</h3>
+<p>The call for papers is organized around three problems. Under each one we list the open questions we most want the workshop to make progress on.</p>
+
+<h4>1. Scaling: the laws that society plans around</h4>
+<ul>
+  <li><strong>Capability predictions with error bars.</strong> Scaling laws predict loss well but downstream capability poorly. Can a capability prediction come with an uncertainty that a regulator, or a lab deciding on a release, could act on? And how far ahead does such a prediction stay accurate?</li>
+  <li><strong>Which quantity, if not training compute?</strong> Inference-time compute, post-training and tool use all change what a model can do while its training FLOPs stay the same. We invite proposals for other quantities, along with tests of them.</li>
+</ul>
+
+<h4>2. Measurement: the evaluations that decisions rest on</h4>
+<ul>
+  <li><strong>Validity and resolution of benchmarks.</strong> How large does a benchmark need to be to separate the models that a decision compares? And how many of its labels are wrong?</li>
+  <li><strong>From the lab to the field.</strong> When does a benchmark score predict an effect that shows up in deployment, such as productivity, persuasion or task substitution?</li>
+  <li><strong>Evaluations under strategic behavior.</strong> Models can underperform on purpose, or behave differently when they infer that they are being tested. Which evaluation designs still tell us something when the system under test adapts?</li>
+</ul>
+
+<h4>3. Mechanism: how training produces societal effects</h4>
+<ul>
+  <li><strong>Homogenization.</strong> Language models from different families give similar answers to open-ended questions, and decision makers who share one algorithm can all end up worse off. How correlated are the failures of deployments that share a base model, and which stage of training sets that correlation?</li>
+  <li><strong>Scoring rules as incentives.</strong> Leaderboard scores decide which models get deployed and which outputs train the next round, so a score changes the population of models it measures. Developers submit many variants of one model to an arena, and they train on the test task. A score that rates each model on its own gives a capability that every model already has the same credit as one that no model has. Alignment tuning and model-assisted writing already narrow the diversity of outputs. Which scoring rules reward quality and diversity together, so that the whole population of models improves and not only the model at the top?</li>
+  <li><strong>Preferences, values and sycophancy.</strong> Preference optimization rewards a model for agreeing with the user and over-optimizes imperfect rewards. Models also show coherent value systems. Which of these behaviors come from the pretraining data, and which from the post-training objective?</li>
+  <li><strong>Provenance, memorization and feedback loops.</strong> Training data can be extracted from deployed models, and watermarks have provable limits. Models trained on their own outputs can degrade or stay stable, depending on whether real data is kept. Once models write most new text, what can the provenance of text and data still guarantee?</li>
+</ul>
+
+<p>We especially welcome work that <strong>connects a mechanism in training to an effect that society measures</strong>, and work that <strong>re-tests a published claim that a policy or deployment decision already relies on</strong>.</p>
+
+<h3 id="guidelines">Submission guidelines</h3>
+<ul>
+  <li>Submissions go through OpenReview, in two non-archival tracks.
+    <ul>
+      <li><strong>Full papers</strong> (up to 8 pages, excluding references) report new results.</li>
+      <li><strong>Tiny papers</strong> (up to 3 pages, excluding references) follow the ICLR tiny-paper initiative. We will promote this track outside the ML conference circuit, including to economists, legal scholars and policy researchers. A tiny paper can be a simple unpublished idea with its evaluation, or a self-contained theoretical result. Most of all, we want <em>re-analyses</em>: follow-up experiments that re-test a published claim about AI, with priority for claims cited in policy documents or system cards. As ICLR requires, tiny papers must be written mainly by humans.</li>
+    </ul>
+  </li>
+  <li>Work already published at a machine learning venue, including the ICLR 2027 main track, is out of scope.</li>
+  <li>Every submission gets double-blind reviews from at least three program committee members. The committee covers scaling, evaluation and the societal effects of models, and tiny papers in economics or policy also go to reviewers from those fields.</li>
+  <li>Reviewers declare conflicts from shared institutions, recent collaborations and advising relationships, and they do not review papers they are conflicted with.</li>
+  <li>Organizers never handle submissions from authors at their own institution. Those papers go to organizers from other institutions.</li>
+  <li>We follow the ICLR 2027 policy on large language models: AI can assist, but it cannot be a primary author or a reviewer.</li>
+</ul>
+
+<h2 id="organizers">Organizers</h2>
+<div class="team-container">
+  <div class="team-member">
+    <img src="https://science-ai-2026.github.io/organizers/hanlin_profile.png" alt="" loading="lazy">
+    <a href="https://hanlin-zhang.com/">Hanlin Zhang</a>
+    <p>Harvard University</p>
+  </div>
+  <div class="team-member">
+    <img src="https://science-ai-2026.github.io/organizers/yizhou_profile.webp" alt="" loading="lazy">
+    <a href="https://liuyz0.github.io/">Yizhou Liu</a>
+    <p>MIT</p>
+  </div>
+  <div class="team-member">
+    <img src="https://matheart.github.io/images/profile_blue.png" alt="" loading="lazy">
+    <a href="https://matheart.github.io/">Honam Wong</a>
+    <p>University of Pennsylvania</p>
+  </div>
+  <div class="team-member">
+    <img src="https://science-ai-2026.github.io/organizers/yizhong_profile.jpg" alt="" loading="lazy">
+    <a href="https://yizhongw.github.io/">Yizhong Wang</a>
+    <p>University of Texas at Austin</p>
+  </div>
+  <div class="team-member">
+    <div class="initials" aria-hidden="true">YL</div>
+    <span class="name">Yueying Li</span>
+    <p>NVIDIA</p>
+  </div>
+  <div class="team-member">
+    <img src="https://science-ai-2026.github.io/organizers/sham_profile.jpg" alt="" loading="lazy">
+    <a href="https://shamulent.github.io/">Sham M. Kakade</a>
+    <p>Harvard University</p>
+  </div>
+  <div class="team-member">
+    <img src="https://www.weijie-su.com/images/WeijieSu.jpg" alt="" loading="lazy">
+    <a href="https://www.weijie-su.com/">Weijie Su</a>
+    <p>University of Pennsylvania</p>
+  </div>
+  <div class="team-member">
+    <img src="https://www.bu.edu/cds-faculty/files/2025/06/Naomi-Saphra-600x600.png" alt="" loading="lazy">
+    <a href="https://nsaphra.net/">Naomi Saphra</a>
+    <p>Boston University</p>
+  </div>
+</div>
+
+<h3 id="contact">Contact</h3>
+<p>For questions about the workshop, submissions or attending, email the organizers at <span class="todo">contact email to be added</span>.</p>
+
+</main>
+
+<footer class="footer">
+  <div class="container">© Copyright 2026 Science and Society of Modern AI @ ICLR 2027</div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
